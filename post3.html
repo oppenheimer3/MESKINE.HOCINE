@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<style>
+		div {
+		  text-align: justify;
+		  text-justify: inter-word;
+		}
+		</style>
+	
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+		.column1 {
+		  float: left;
+		  width: 33.33%;
+		  padding: 5px;
+		}
+		
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		</style> 
+		<style>
+			.button-container-div {
+				text-align: center;
+				border: 1px solid rgb(255, 255, 255);
+				height: 40vh;
+				width: 90vw;
+			}
+		</style>   
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+			</script>
+			
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html#top">ABOUT ME</a></li>
+					<li><a href="index.html#work">MY SKILLS</a></li>
+					<li><a href="index.html#portfolio">MY PROJECTS</a></li>
+					<li><a href="index.html#contact">CONTACTS</a></li>
+				</ul>
+			</nav>
+
+        <!-- AMC -->
+        <article id="winrate" class="wrapper style1">
+			
+            <div class="container">
+             <img src="images/novelic-new3.png" alt="Snow" style="width:100%;">
+             <header>
+                <h2>AMC operating frequencies prediction</h2>
+				
+            </header>
+			
+			        
+			</div>
+        </article>
+		<article id="work" class="wrapper style1">
+			
+			<div class="container">
+				<header>
+					<h2>Summary</h2>
+					<p>the Artificial Magnetic Conductor is an artificial material that has many applications in the electromagnetic domain, one of which is the ability to enhance the performance of antennas by increasing its gain and directivity. However this property is not present in all the frequency spectrum, for example a single-band AMC can operate only within 3one frequency. These frequencies depends on the design and dimensions of the structure.</p>
+
+					
+					<p>In my final year project I was given a triple-band AMC and was asked to build a mathematical model that determine these frequencies, after finishing my project I had the idea that building a machine learning model will make the job easier. so the goal of this project was to build a machine learning model that predict the operating frequencies of the AMC based on its dimensions.
+
+					
+					
+				</header>
+				
+				<footer>
+					<h2>The data</h2>
+					<p>The main way of getting the data was software for simulating electromagnetic structures called Computer Simulation Technology (CST):</p>
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 110155.png" alt="" style="width:70%;" /></a>
+
+					
+				
+					<p><br> After the simulation the results will be present in a graph:</p>
+
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 110430.png" alt="" style="width:70%;" /></a>
+					<p>As the graph shows there exist three operating frequencies for this design, the CST software gives you the ability to export the results where they will be present in a form of array of values or steps taking across the graph and they will be saved in .s1p file:</p>
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 111912.png" alt="" style="width:70%;" /></a>
+					<p>This file represents the results of one simulation, so after running multiple simulations and writing an algorithm to determine the operating frequencies on each file the dataset is built:</p>
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 112515.png" alt="" style="width:70%;" /></a>
+					<p>The results were then stored in database on a local MySQL server using Sqlalchemy in case I did more simulations in the future:</p>					
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 113232.png" alt="" style="width:70%;" /></a>
+
+					
+					<h2>The machine learning model</h2>
+					<p>In another file I imported the results from the database, split the data into train and test, and used the Linear Regression model to predict the results:</p>
+					<div class="column1">
+
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-07 114436.png" alt="" style="width:100%;" /></a>
+										
+					</div>
+					<div class="column1">
+
+					<a  class="image featured"><img src="images/Screenshot 2022-09-07 114456.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column1">
+
+						<a  class="image featured"><img src="images/Screenshot 2022-09-07 114516.png" alt="" style="width:100%;" /></a>
+					</div>
+					
+				  
+					<div class="button-container-div">
+					<a href="https://github.com/oppenheimer3/Triple-band-AMC" class="button large scrolly">View source code</a>
+					</div>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<style>
+		div {
+		  text-align: justify;
+		  text-justify: inter-word;
+		}
+		</style>
+	
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+		.column1 {
+		  float: left;
+		  width: 25%;
+		  padding: 5px;
+		}
+		
+		/* Clearfix (clear floats) */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		</style> 
+		<style>
+			.button-container-div {
+				
+				text-align: center;
+				border: 1px solid rgb(255, 255, 255);
+				height: 40vh;
+				width: 90vw;
+			}
+			
+		</style>   
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+			</script>
+			
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html#top">ABOUT ME</a></li>
+					<li><a href="index.html#work">MY SKILLS</a></li>
+					<li><a href="index.html#portfolio">MY PROJECTS</a></li>
+					<li><a href="index.html#contact">CONTACTS</a></li>
+				</ul>
+			</nav>
+
+        <!-- stock -->
+        <article id="winrate" class="wrapper style1">
+			
+            <div class="container">
+             <img src="images/2847970.webp" alt="Snow" style="width:100%;">
+             <header>
+                <h2>Stocks prediction GUI using API</h2>
+				
+            </header>
+			
+			        
+			</div>
+        </article>
+		<article id="work" class="wrapper style1">
+			
+			<div class="container">
+				<header>
+					<h2>Summary</h2>
+					<p>The goal of this project was to predict the stocks of certain company based on the previous stocks using an API, then pack it into a graphical user interface.</p>
+					
+				</header>
+				
+				<footer>
+					<h2>The data</h2>
+					<p>The data of this project was extracted from the stock API <a href="https://polygon.io/"> Polygon.io – Stock Market Data APIs</a>, then turned into a pandas dataframe:</p>
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 161831.png" alt="" style="width:70%;" /></a>
+
+					
+								
+					
+					
+						
+					
+					<p><br> The open price (or closed) stocks column was transformed into values in the range of [0,1] using the MinMaxScaler and then was divided into train set 80% and test set 20%, the train data was finally made by taking the first 60 values as X and the 61th value as the corresponding Y and so on.</p>
+					
+					<h2>The machine learning model</h2>
+					<p>Long Short Term Memory was used in this project which is a type of recurrent neural network capable of learning order dependence in sequence prediction problems. So after building the network and fitting the model on the train data, the model was used on the test data that was built in the same way as the train data to predict the stocks:</p>
+					
+
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 184716.png" alt="" style="width:50%;" /></a>
+										
+					
+				
+					
+					
+				  	<p><br>As we see the model was not very accurate in this case because of the number of values that were used while fitting it, and that is because the API did not give many values, if we try the model with much more values using pandas Datareader and we use <a href="https://finance.yahoo.com/quote/AAPL%3B/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALALb_A8IuUcQLXyEWfc_1BKfbBRyE-xbxdxz9O_7DGIhAJe3X1dXIco13iPFp3CHsrofi3DCxg-412TGT4Zz4XmTtpLEA5SbN702wRZG03rQarBpVTY9Rn7FgO7nE3gYBYolIQ8S4MBtVQoWj7W8bjLhzWbYAvBeCwvm9grSI85">yahoo</a> as a data source:</p>
+					
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 161201.png" alt="" style="width:50%;" /></a>
+					<h2>GUI</h2>
+					<p>The graphical user interface was built using Tkinter:</p>
+					
+					<div class="column1">
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 185607.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column1">
+					<a  class="image featured"><img src="images//Screenshot 2022-09-06 185728.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column1">
+					<a  class="image featured"><img src="images/Screenshot 2022-09-06 185759.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column1">
+					<a  class="image featured"><img src="images/Screenshot 2022-09-06 185826.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column">
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 190246.png" alt="" style="width:100%;" /></a>
+					</div>
+					<div class="column">
+					<a  class="image featured" ><img src="images/Screenshot 2022-09-06 190733.png" alt="" style="width:100" /></a>
+					</div>
+					<p style="color:rgb(255, 255, 255);">.</p>
+
+					
+					<div class="button-container-div" >
+						
+					<a href="https://github.com/oppenheimer3/stocks_prediction_usingAPI" class="button large scrolly">View source code</a>
+					</div>
+					
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
